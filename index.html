@@ -3,122 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganar dinero con páginas HTML - Guía rápida sin inversión</title>
-    <meta name="description" content="Aprende a ganar dinero creando páginas HTML desde cero. Dos métodos probados sin necesidad de invertir. Tutorial completo para principiantes.">
-    <meta name="keywords" content="ganar dinero con HTML, crear páginas web, negocio digital, programación web, SEO, freelancer, José Manuel González">
-    <meta name="author" content="José Manuel González López">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Ganar dinero con páginas HTML - Guía rápida sin inversión">
-    <meta property="og:description" content="Aprende a ganar dinero creando páginas HTML desde cero. Métodos probados sin necesidad de invertir.">
+    <title>Guía Definitiva: Crea tu Web Gratis y Gana Dinero | José Manuel González</title>
+    <meta name="description" content="Aprende a crear tu primera página web desde cero sin invertir un peso. Tutorial paso a paso con ejemplos prácticos y consejos SEO para monetizar tu proyecto.">
+    <link rel="canonical" href="https://gonzalezlopezjosemanuel884-hash.github.io/Jmanuel/">
+    <meta property="og:title" content="Guía Definitiva: Crea tu Web Gratis y Gana Dinero">
+    <meta property="og:description" content="Tutorial completo para crear tu página web profesional sin pagar hosting ni dominio. Incluye estrategias de monetización.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Jmanuel.github.io/ganar_dinero.html">
+    <meta name="robots" content="index, follow">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #facc15;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-800: #1e293b;
+            --text: #0f172a;
+        }
         body {
-            background-color: #ffffff;
-            color: #333333;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            font-size: 18px;
-            padding: 30px;
-            max-width: 900px;
-            margin: 0 auto;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--gray-50);
+            color: var(--text);
             line-height: 1.8;
+            padding: 1.5rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
         }
         h1 {
-            color: #2c3e50;
-            border-bottom: 5px solid #f39c12;
-            padding-bottom: 15px;
-            font-size: 34px;
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
         h2 {
-            color: #d35400;
-            margin-top: 35px;
+            font-size: 2rem;
+            color: var(--gray-800);
+            border-bottom: 4px solid var(--gray-100);
+            padding-bottom: 0.5rem;
+            margin: 2.5rem 0 1.5rem;
         }
-        .metodo {
-            background-color: #fef9e7;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 5px solid #f39c12;
-            margin: 25px 0;
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 2rem 0 0.75rem;
         }
-        .cta {
-            background-color: #2c3e50;
+        p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        ul, ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--primary-dark);
+            font-weight: 600;
+            padding: 0.35rem 1.2rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+        .intro-box {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 24px;
+            border-left: 6px solid var(--primary);
+            margin: 2rem 0;
+        }
+        .tip-box {
+            background: #fefce8;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 6px solid var(--secondary);
+            margin: 1.5rem 0;
+        }
+        .cta-box {
+            background: var(--gray-800);
             color: white;
-            padding: 25px;
-            border-radius: 10px;
+            padding: 2.5rem;
+            border-radius: 24px;
             text-align: center;
-            margin: 30px 0;
+            margin: 2.5rem 0;
         }
-        .cta a {
-            color: #f1c40f;
-            font-weight: bold;
-            font-size: 22px;
+        .cta-box h2 {
+            color: var(--secondary);
+            border-bottom: none;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--text);
+            font-weight: 700;
+            padding: 0.85rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px -8px rgba(0,0,0,0.2);
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px -8px rgba(37,99,235,0.15);
+            transform: translateY(-4px);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+        .social-links a {
+            color: #475569;
+            font-weight: 500;
             text-decoration: none;
         }
-        .cta a:hover {
-            text-decoration: underline;
+        .social-links a:hover {
+            color: var(--primary);
         }
-        .enlace-destacado {
-            color: #e74c3c;
-            font-weight: bold;
+        .footer-quote {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 2rem 1.2rem; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.6rem; }
+            .grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <h1>¿Puedo ganar dinero con las páginas HTML de forma fácil y sencilla sin ningún tipo de inversión?</h1>
-    <p><strong>¡Claro que puedes, y es relativamente fácil!</strong></p>
-    <p>El negocio de las webs es uno de los <strong>negocios más rentables del siglo 21</strong>. Vender <strong>valor</strong> al usuario es un arte digno de refinar. Aquí te enseño las <strong>2 mejores maneras</strong> de ganar dinero con una página HTML creada desde 0.</p>
-    <p><strong>📚 Mis mejores artículos:</strong></p>
-    <ul>
-        <li><a href="Como_programar_en_HTML.html" style="color: #8e44ad;">➡️ Cómo programar en HTML fácil y sencillo desde 0</a></li>
-        <li><a href="Jose_Manuel_Gonzalez_Lopez.html" style="color: #d35400;">➡️ Portafolio de José Manuel González López</a></li>
-        <li><a href="Aprende_HTML_gratis.html" style="color: #e74c3c;">➡️ ¿Es posible crear una web sin curso de 4 horas?</a></li>
-    </ul>
-    <hr>
-    <h2>Las 2 puertas para ganar dinero con páginas web</h2>
-    <div class="metodo">
-        <h3 style="color: #2c3e50;">🚪 1- Vender páginas web creadas por ti</h3>
-        <p><strong>Primer paso:</strong> Busca un cliente dispuesto a pagarte por <strong>crear una página web a medida</strong>, para uso personal o empresarial.</p>
-        <p>Esto te abrirá más puertas de las que imaginas: no solo trabajarás como <strong>programador web</strong>, sino también como <strong>copywriter, diseñador y SEO</strong>.</p>
-        <p><strong>Consejo clave:</strong> Cobra lo justo (ni menos ni más). En mi <strong>Asesoría Personal</strong> te enseño a poner precios y encontrar clientes.</p>
-        <p>¿Quieres aprender más? <a href="Jose_Manuel_Gonzalez_Lopez.html" class="enlace-destacado">➡️ Mira mi tabla de precios aquí</a></p>
+    <div class="container">
+        <span class="badge">🚀 GUÍA COMPLETA 2026</span>
+        <h1>¿Es posible crear una web en HTML y CSS sin comerte un curso de 4 horas?</h1>
+        <p style="font-size: 1.25rem; color: #475569;">¡Sí, y hoy te voy a demostrar cómo! Esta guía te llevará de la idea a la realidad en menos de lo que imaginas.</p>
+
+        <div class="intro-box">
+            <p><strong>¿Para qué necesitas una web?</strong> No importa si eres emprendedor, artista, profesional o simplemente quieres compartir tus ideas. Tener presencia digital ya no es un lujo, es una necesidad. Con una web puedes:</p>
+            <ul>
+                <li><strong>Promocionar tu marca</strong> y llegar a miles de personas.</li>
+                <li><strong>Crear una marca personal</strong> que te abra puertas laborales.</li>
+                <li><strong>Ganar dinero</strong> mediante anuncios, ventas o servicios.</li>
+                <li><strong>Aparecer en Google</strong> y que te encuentren fácilmente.</li>
+            </ul>
+            <p style="margin-top: 1rem;">Al terminar este artículo, junto con los otros dos enlazados, estarás listo para publicar tu propia web hoy mismo. Gracias a José Manuel González López, un servidor 😉.</p>
+        </div>
+
+        <h2>¿Qué es HTML y por qué es tu mejor aliado?</h2>
+        <p><strong>HTML</strong> (HyperText Markup Language) no es un lenguaje de programación, como muchos creen. Es un <strong>lenguaje de marcado</strong> que da estructura a tu contenido. Piensa en él como los huesos de tu cuerpo: sin ellos, no hay forma.</p>
+        <p>Se basa en <strong>etiquetas</strong> (tags) que envuelven el contenido para darle significado. Por ejemplo:</p>
+        <pre style="background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 12px; overflow-x: auto; margin: 1rem 0;">
+&lt;h1&gt;Este es un título principal&lt;/h1&gt;
+&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+&lt;a href="https://google.com"&gt;Esto es un enlace&lt;/a&gt;</pre>
+        <p>Con solo un puñado de etiquetas ya puedes crear una página funcional. Y lo mejor: es <strong>gratuito, universal y te da control total</strong> sobre tu diseño.</p>
+
+        <h2>CSS: el maquillaje que hace brillar tu web</h2>
+        <p><strong>CSS</strong> (Cascading Style Sheets) es el lenguaje que da estilo: colores, tamaños, márgenes, fondos, animaciones... Es la parte visual que engancha a los usuarios y hace que tu web sea agradable a la vista.</p>
+        <p>Con CSS puedes transformar un documento aburrido en una experiencia inmersiva. Y lo mejor: es tan fácil como HTML. Aquí tienes un ejemplo sencillo:</p>
+        <pre style="background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 12px; overflow-x: auto; margin: 1rem 0;">
+body {
+    background: #f0f4ff;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #2563eb;
+    font-size: 2.5rem;
+    text-align: center;
+}</pre>
+        <p>Con esto, tu página pasaría de parecer un documento de Word a tener personalidad propia.</p>
+
+        <h2>¿Cómo publicar tu web sin pagar un peso?</h2>
+        <p>Aquí está el secreto que muchos esconden: <strong>GitHub Pages</strong>. Es un servicio gratuito de GitHub que te permite alojar páginas estáticas (HTML, CSS, JS) directamente desde un repositorio. Y es increíblemente fácil de usar.</p>
+        <div class="tip-box">
+            <p><strong>🔥 Truco de experto:</strong> Puedes tener tu web en internet en menos de 10 minutos. Solo necesitas una cuenta en GitHub y un archivo <code>index.html</code>. El resto lo hace GitHub por ti.</p>
+        </div>
+        <p><strong>Pasos para publicar con GitHub Pages:</strong></p>
+        <ol>
+            <li><strong>Crea una cuenta</strong> en <a href="https://github.com" target="_blank" style="color: var(--primary);">GitHub</a> (gratis).</li>
+            <li><strong>Crea un repositorio</strong> con el nombre <code>tusuario.github.io</code>.</li>
+            <li><strong>Sube tu archivo</strong> <code>index.html</code> (y todos los demás).</li>
+            <li><strong>Activa GitHub Pages</strong> en la configuración del repositorio (Settings → Pages → Deploy from branch → main).</li>
+            <li><strong>Espera 1-2 minutos</strong> y visita <code>tusuario.github.io</code>. ¡Tu web ya está en línea!</li>
+        </ol>
+        <p>¿Ves? No necesitas hosting ni dominio. Todo es gratuito y de calidad profesional.</p>
+
+        <h2>¿Y el SEO? Cómo aparecer en Google</h2>
+        <p>Que tu web exista es solo el primer paso. Necesitas que la gente la encuentre. Para eso está el <strong>SEO</strong> (Search Engine Optimization). No te asustes, no es magia oscura: es sentido común aplicado.</p>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🔑 Palabras clave</h3>
+                <p>Investiga qué busca tu público y usa esas palabras en tus títulos, encabezados y texto. Herramientas como <strong>Google Keyword Planner</strong> o <strong>Ubersuggest</strong> son tus aliadas.</p>
+            </div>
+            <div class="card">
+                <h3>📝 Contenido de calidad</h3>
+                <p>Escribe para personas, no para motores de búsqueda. Resuelve dudas, da ejemplos prácticos y sé útil. El contenido de valor es el que mejor posiciona.</p>
+            </div>
+            <div class="card">
+                <h3>🔗 Enlaces internos</h3>
+                <p>Enlaza tus propias páginas entre sí. Esto ayuda a los usuarios a navegar y a Google a entender la estructura de tu sitio.</p>
+            </div>
+            <div class="card">
+                <h3>📱 Optimización móvil</h3>
+                <p>Tu web debe verse bien en móviles. Usa diseños responsivos (con CSS) para que se adapte a cualquier pantalla.</p>
+            </div>
+        </div>
+
+        <h2>Preguntas frecuentes (FAQ)</h2>
+        <div style="background: var(--gray-100); padding: 1.5rem; border-radius: 16px; margin: 1.5rem 0;">
+            <p><strong>¿Necesito saber programar para crear una web?</strong> No, pero aprender lo básico te dará control total. Con HTML y CSS puedes hacer maravillas.</p>
+            <p><strong>¿Es seguro usar GitHub Pages?</strong> Totalmente. HTTPS incluido, sin costo y con excelente rendimiento.</p>
+            <p><strong>¿Cuánto tiempo lleva tener una web lista?</strong> Si sigues los pasos, en menos de una hora puedes tener tu primera página publicada.</p>
+            <p><strong>¿Puedo usar un dominio propio?</strong> Sí, GitHub Pages te permite configurar dominios personalizados.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>🔥 ¿Quieres que te ayude a crear tu web?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Yo, <strong>José Manuel González</strong>, te guío en todo el proceso. Desde la idea hasta la publicación y monetización.</p>
+            <a href="mailto:gonzalezlopezjosemanuel884@gmail.com" class="btn">📩 Contrátame y empieza tu proyecto</a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.7;">📱 <strong>WhatsApp:</strong> +53 59581052</p>
+        </div>
+
+        <!-- Enlaces internos -->
+        <h3>📚 Sigue aprendiendo conmigo</h3>
+        <ul>
+            <li><a href="ganar_dinero.html" style="color: var(--primary);">💰 Cómo ganar dinero con páginas HTML</a></li>
+            <li><a href="Jose_Manuel_Gonzalez_Lopez.html" style="color: var(--primary);">👤 Mi portafolio profesional</a></li>
+            <li><a href="programar-html-css-js.html" style="color: var(--primary);">💻 Guía definitiva de HTML, CSS y JavaScript</a></li>
+        </ul>
+
+        <hr style="border: 0; border-top: 2px solid #e2e8f0; margin: 2.5rem 0;">
+
+        <p style="text-align: center;"><strong>Hasta aquí nuestra guía de hoy.</strong> Mi nombre es <strong>José Manuel González López</strong>, y si quieres dar el salto, ya sabes cómo contactarme.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100075450046235" target="_blank">💙 Facebook</a>
+            <a href="https://www.instagram.com/satoo_body_666" target="_blank">🧡 Instagram</a>
+            <a href="https://youtube.com/@satooplay" target="_blank">❤️ YouTube</a>
+            <a href="https://forms.gle/ZoaFQ1JSXwDk6Wq17" target="_blank">📋 Formulario de contacto</a>
+        </div>
+        <div class="footer-quote">
+            🌹 <em>"Hay que estar loco... para querer ser el villano de tu propia historia"</em> 🖤
+        </div>
     </div>
-    <div class="metodo">
-        <h3 style="color: #2c3e50;">🚪 2- Vender productos o servicios en tu propia web</h3>
-        <p><strong>Segundo paso:</strong> Creas una web y la administras tú mismo. Aplicas <strong>SEO</strong>, seleccionas un nicho y colocas anuncios o productos de afiliados.</p>
-        <p>Por ejemplo: creas una web sobre <strong>camisetas</strong> y, con 500 visitas diarias, puedes ganar <strong style="color: green;">15€ al día</strong> solo con publicidad. ¡Eso son más de <strong style="color: green;">450€ al mes</strong>!</p>
-        <p><strong>Y hay más:</strong> Con mi <strong>Auditoría Personal</strong> puedes ganar el doble o el triple. Te enseño a impulsar tus ventas, mejorar tu SEO y crear una web desde 0 sin inversión.</p>
-        <p><strong>🔥 OFERTA ESPECIAL:</strong> <a href="Jose_Manuel_Gonzalez_Lopez.html" class="enlace-destacado">Contrátame ahora</a> y llévate un <strong style="color: red;">20% de descuento</strong> en todos los servicios durante 30 días. ¡Solo para los primeros 10 clientes!</p>
-    </div>
-    <div class="cta">
-        <p><strong>🔥 ¿Quieres empezar a ganar dinero con tus webs HOY?</strong></p>
-        <p><a href="Jose_Manuel_Gonzalez_Lopez.html">👉 Contrata mi Asesoría Personal y te enseño el camino 👈</a></p>
-        <p style="font-size: 16px;">📩 O escríbeme directamente: <a href="mailto:gonzalezlopezjosemanuel884@gmail.com" style="color: #f1c40f;">gonzalezlopezjosemanuel 884@gmail.com</a></p>
-    </div>
-    <hr>
-    <p style="text-align: center;"><strong>Hasta aquí ha llegado nuestro encuentro de hoy, mis queridos usuarios.</strong></p>
-    <p style="text-align: center;">Mi nombre es <strong>José Manuel González López</strong> y soy un SEO con bastante potencial. Si me quieres contratar para impulsar tu página web, <a href="Jose_Manuel_Gonzalez_Lopez.html">sigue este enlace</a> y dímelo tú mismo.</p>
-    <p style="text-align: center;">📱 Sígueme en mis redes sociales (¡necesito más alcance!):</p>
-    <p style="text-align: center;">
-        💙 <a href="https://www.facebook.com/profile.php?id=100075450046235" target="_blank">Facebook</a> | 
-        🧡 <a href="https://www.instagram.com/satoo_body_666?igsh=MWZkaTlwMXdpNGthOQ==" target="_blank">Instagram</a> | 
-        ❤️ <a href="https://youtube.com/@satooplay?si=EmuosOeGQGmq1oZJ" target="_blank">YouTube</a>
-    </p>
-    <p style="text-align: center;">Si aprecias mi contenido, <a href="https://forms.gle/ZoaFQ1JSXwDk6Wq17" target="_blank">rellena mi formulario de contacto</a>. ¡Te lo agradecería mucho! ❤️🧡💙</p>
-    <hr>
-    <h4>📩 ¡Estemos en contacto!</h4>
-    <form action="mailto:gonzalezlopezjosemanuel884@gmail.com" method="POST" enctype="text/plain">
-        <p><strong>Tu nombre:</strong><br>
-        <input type="text" name="Nombre" style="width: 100%; padding: 10px; font-size: 16px;"></p>
-        <p><strong>Tu correo:</strong><br>
-        <input type="email" name="Email" style="width: 100%; padding: 10px; font-size: 16px;"></p>
-        <p><strong>Tus comentarios:</strong><br>
-        <textarea name="Comentarios" rows="6" cols="40" style="width: 100%; padding: 10px; font-size: 16px;"></textarea></p>
-        <p>
-        <input type="submit" value="Enviar datos" style="padding: 12px 30px; background: #2c3e50; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
-        <input type="reset" value="Borrar datos" style="padding: 12px 30px; background: #e74c3c; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
-        </p>
-    </form>
-    <hr>
-    <p style="text-align: center; font-size: 20px;">🌹 <strong>"Hay que estar loco... para querer ser el villano de tu propia historia"</strong> 🖤</p>
+
+    <script>
+        // Interactividad premium
+        document.addEventListener('DOMContentLoaded', function() {
+            // Efecto de aparición del título
+            const titulo = document.querySelector('h1');
+            titulo.style.opacity = '0';
+            titulo.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                titulo.style.transition = 'opacity 1s ease, transform 1s ease';
+                titulo.style.opacity = '1';
+                titulo.style.transform = 'translateY(0)';
+            }, 200);
+
+            // Contador de visitas con localStorage
+            let visitas = parseInt(localStorage.getItem('visitasIndex')) || 0;
+            visitas++;
+            localStorage.setItem('visitasIndex', visitas);
+            console.log(`📊 Visitas a la página principal: ${visitas}`);
+
+            // Animación de las cards al aparecer
+            const cards = document.querySelectorAll('.card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>

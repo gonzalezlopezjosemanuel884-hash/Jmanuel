@@ -3,181 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Manuel González López - Diseñador Web y SEO</title>
-    <meta name="description" content="José Manuel González López, diseñador web cubano. Especialista en creación de páginas HTML, SEO y copywriting. Precios asequibles y resultados garantizados.">
-    <meta name="keywords" content="diseñador web, programador HTML, SEO, copywriting, creación de páginas web, freelancer cubano">
-    <meta name="author" content="José Manuel González López">
-    <meta name="robots" content="index, follow">
+    <title>José Manuel González López - Diseñador Web y SEO | Portafolio</title>
+    <meta name="description" content="José Manuel González López, diseñador web cubano. Especialista en HTML, CSS, SEO y copywriting. Precios desde 2€. Convierte tu idea en un negocio digital.">
+    <link rel="canonical" href="https://gonzalezlopezjosemanuel884-hash.github.io/Jmanuel/Jose_Manuel_Gonzalez_Lopez.html">
     <meta property="og:title" content="José Manuel González López - Diseñador Web y SEO">
-    <meta property="og:description" content="Diseñador web cubano. Especialista en HTML, SEO y copywriting. Precios asequibles.">
+    <meta property="og:description" content="Diseñador web cubano especializado en creación de páginas profesionales, SEO y copywriting. Precios accesibles y resultados garantizados.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Jmanuel.github.io/Jose_Manuel_Gonzalez_Lopez.html">
+    <meta name="robots" content="index, follow">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #facc15;
+            --primary-dark: #ca8a04;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-light: #e2e8f0;
+            --text-gray: #94a3b8;
+        }
         body {
-            background-color: #000088;
-            color: #ffffff;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            font-size: 18px;
-            padding: 30px;
-            max-width: 900px;
-            margin: 0 auto;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
             line-height: 1.8;
+            padding: 1.5rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 32px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
         }
         h1 {
-            color: #ffdd00;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
             text-align: center;
-            font-size: 34px;
+            margin-bottom: 0.5rem;
         }
-        h2 {
-            color: #ffdd00;
-        }
-        h3 {
-            color: #ffdd00;
+        .subhead {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
         }
         .foto-perfil {
             display: block;
-            margin: 20px auto;
-            width: 200px;
-            height: 200px;
+            margin: 0 auto 2rem;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 5px solid #ffdd00;
+            border: 4px solid var(--primary);
             object-fit: cover;
         }
-        .tabla-precios {
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.5rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin: 2rem 0 0.75rem;
+        }
+        p {
+            margin-bottom: 1.25rem;
+            color: #cbd5e1;
+        }
+        ul, ol {
+            margin: 1rem 0 1.5rem 2rem;
+            color: #cbd5e1;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--bg-dark);
+            font-weight: 700;
+            padding: 0.85rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px -8px rgba(250,204,21,0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #334155;
+            padding: 2rem;
+            border-radius: 24px;
+            border: 1px solid #475569;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px -8px rgba(250,204,21,0.2);
+            transform: translateY(-4px);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .table-prices {
             width: 100%;
             border-collapse: collapse;
-            background-color: #ffffff;
-            color: #000000;
-            margin: 20px 0;
+            margin: 1.5rem 0;
+            background: #0f172a;
+            border-radius: 16px;
+            overflow: hidden;
         }
-        .tabla-precios th {
-            background-color: #ffdd00;
-            padding: 15px;
+        .table-prices th {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 1rem;
+            font-weight: 700;
+            text-align: left;
         }
-        .tabla-precios td {
-            padding: 12px;
-            border: 1px solid #cccccc;
+        .table-prices td {
+            padding: 1rem;
+            border-bottom: 1px solid #334155;
         }
-        .servicio-destacado {
-            background-color: #0000aa;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #ffdd00;
-            margin: 20px 0;
+        .table-prices tr:last-child td {
+            border-bottom: none;
         }
-        .aviso-seguridad {
-            background-color: #cc0000;
-            color: #ffffff;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .formulario {
-            background-color: #0000aa;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .cta {
-            background-color: #ffdd00;
-            color: #000000;
-            padding: 20px;
-            border-radius: 10px;
+        .cta-box {
+            background: #0f172a;
+            padding: 2.5rem;
+            border-radius: 24px;
             text-align: center;
-            margin: 30px 0;
+            border: 2px solid var(--primary);
+            margin: 2.5rem 0;
         }
-        .cta a {
-            color: #0000cc;
-            font-weight: bold;
-            font-size: 22px;
+        .cta-box h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+        .social-links a {
+            color: var(--text-gray);
+            font-weight: 500;
             text-decoration: none;
         }
-        .cta a:hover {
-            text-decoration: underline;
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        .footer-quote {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            border-top: 1px solid #334155;
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+        .security-box {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 6px solid var(--primary);
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 2rem 1.2rem; }
+            h1 { font-size: 2.2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <h1>¿Quién es José Manuel González López?</h1>
-    <h1 style="font-size: 22px; color: #ffdd00;">Portafolio de un Diseñador Web</h1>
-    <img src="Elcaballerodelasrosas.jpg" alt="José Manuel González López - Diseñador Web y SEO" class="foto-perfil">
-    <p>Hola mis queridos usuarios, mi nombre es <strong>José Manuel González López</strong> y soy un <strong>emprendedor cubano</strong>.</p>
-    <p>Pero en vez de ir por ahí vendiendo turrones y raspaduras, <strong style="color:red;">hago páginas web y aplico SEO</strong>. Esa es mi funcionalidad principal.</p>
-    <h2>📂 Mis páginas más destacadas</h2>
-    <p>Entre las páginas que he elaborado, las más notables y de las que estoy bastante orgulloso son:</p>
-    <ul>
-        <li><a style="color:yellow;" href="Como_programar_en_HTML.html">➡️ Cómo programar en HTML fácil y sencillo desde 0</a></li>
-        <li><a style="color:orange;" href="index.html">➡️ Cómo GANAR DINERO con páginas HTML sin inversión</a></li>
-        <li><a style="color:white;" href="Aprende_HTML_gratis.html">➡️ ¿Es posible crear una web sin curso de 4 horas?</a></li>
-    </ul>
-    <p>Estas tres páginas fueron creadas por mí, las elaboré con HTML y las posicioné usando conocimientos avanzados de SEO, cosa que ustedes también pueden hacer.</p>
-    <p><strong>¿Quieres aprender a hacerlo tú mismo?</strong> Solamente tienes que pagar una asesoría personal. En el apartado de precios puedes comprobarlos, justo <a style="color:orange;" href="#precios">aquí abajo</a>.</p>
-    <hr>
-    <h2 style="color:yellow; text-align:center;">🤝 Cómo contratar a un programador web y SEO de forma fácil y sencilla</h2>
-    <p>La forma más fácil es <a style="color:white;" href="https://www.freelancer.com" target="_blank">Freelancer.com</a>, pero ese no es el punto.</p>
-    <p>El punto es promocionarme a mí. Mi nombre es <strong>José Manuel</strong>, SEO, experto en HTML y un excelente copywriter capaz de impulsar, ya sea <strong style="color:pink;">tu empresa, tu negocio o tu perfil personal</strong>, además de las páginas que desees, con un precio <strong style="color:green;">acorde a mis resultados</strong>.</p>
-    <p>La forma más fácil es escribirme a mi Gmail y contratarme. Te doy fe de mis servicios aunque no soy el más acorde para hablar de ellos, así que <strong>hazlo tú...</strong></p>
-    <p>📧 <a style="color:violet;" href="mailto:gonzalezlopezjosemanuel884@gmail.com">gonzalezlopezjosemanuel 884@gmail.com</a></p>
-    <hr>
-    <h3 id="precios" style="color:green;">💰 Lista de precios</h3>
-    <table class="tabla-precios">
-        <tr>
-            <th style="color:violet;">Servicio</th>
-            <th style="color:green;">Coste</th>
-        </tr>
-        <tr>
-            <td>Creación de página web</td>
-            <td>2~5€+</td>
-        </tr>
-        <tr>
-            <td>SEO y posicionamiento</td>
-            <td>3~5€</td>
-        </tr>
-        <tr>
-            <td>Servicio de copywriting</td>
-            <td>2~5€+</td>
-        </tr>
-        <tr>
-            <td><strong>Auditoría personal</strong></td>
-            <td><strong>10€</strong></td>
-        </tr>
-    </table>
-    <h3 style="color:yellow;">📌 Aspectos a recalcar:</h3>
-    <ul>
-        <li>El valor "aproximado" (~) depende del tipo de web que quieres crear y de su complejidad estructural.</li>
-        <li>En el servicio de SEO se te aconsejará y guiará sobre todo el proceso, además de cómo escoger un nicho que te deje dinero de <strong style="color:green;">verdad 💰</strong>.</li>
-        <li>El servicio de copywriting depende de la cantidad de información y el estilo de esta, la cual quieres plasmar en la página. Todo el texto es <strong>100% libre de IA</strong> y está optimizado al máximo para los buscadores.</li>
-        <li><strong>Auditoría personal</strong>: Es el <strong>mejor servicio que ofrezco</strong> con creces. Es una guía paso a paso de cómo <strong style="color:red;">ganar dinero con las webs</strong> que crees, además de enseñarte SEO y posicionamiento. Te doy un <strong style="color:pink;">manual HTML</strong> que es una verdadera joya, incorporado con una herramienta para practicar HTML en tiempo real.</li>
-    </ul>
-    <hr>
-    <h3 style="color:yellow; text-align:center;">⚠️ Cosas que debes saber</h3>
-    <ul>
-        <li>Provengo de un lugar donde el flujo eléctrico es bastante escaso, además de una conexión a internet realmente mala, lo cual puede influir en el tiempo de entrega del producto.</li>
-    </ul>
-    <div class="aviso-seguridad">
-        <strong>🔒 CONDICIÓN DE SEGURIDAD:</strong> Para garantizar la seguridad y veracidad del contrato, <strong style="color:yellow;">es necesario realizar un monto mínimo de 1€ a mi cuenta</strong>. Este monto se descontará del servicio que desees. Esto me ayuda a trabajar mejor y tener la certeza de que no romperán el contrato a medio trabajo. El resto del monto se depositará cuando mande pruebas de que el trabajo está hecho.
+    <div class="container">
+        <h1>¿Quién es José Manuel González López?</h1>
+        <div class="subhead">Diseñador Web · SEO · Copywriter · Emprendedor cubano 🇨🇺</div>
+
+        <img src="Elcaballerodelasrosas.jpg" alt="José Manuel González López - Diseñador Web" class="foto-perfil">
+
+        <p style="text-align: center; font-size: 1.2rem;">Hola, soy <strong>José Manuel</strong>, un apasionado del diseño web y el SEO. No vendo turrones ni raspaduras: <strong style="color: var(--primary);">hago páginas web y aplico SEO</strong> para que tu negocio despegue.</p>
+
+        <h2>📂 Mi trayectoria y mis páginas más destacadas</h2>
+        <p>Empecé desde cero, sin computadora, solo con mi móvil y conexión a internet intermitente. En poco tiempo, he creado varias páginas web que ya están en línea y generan interés. Estas son algunas de ellas:</p>
+        <ul>
+            <li><a href="index.html" style="color: var(--primary);">📖 ¿Es posible crear una web sin curso de 4 horas?</a></li>
+            <li><a href="ganar_dinero.html" style="color: var(--primary);">💰 Cómo ganar dinero con páginas HTML</a></li>
+            <li><a href="programar-html-css-js.html" style="color: var(--primary);">💻 Guía definitiva de HTML, CSS y JavaScript</a></li>
+        </ul>
+        <p>Estas páginas no solo son funcionales, sino que están optimizadas para SEO y diseñadas con un enfoque profesional. Cada una refleja mi compromiso con la calidad y la utilidad para el usuario.</p>
+
+        <h2>🛠️ Servicios y precios</h2>
+        <p>Te ofrezco servicios adaptados a tus necesidades, con precios accesibles para que cualquier emprendedor pueda dar el salto digital.</p>
+
+        <table class="table-prices">
+            <tr><th>Servicio</th><th>Coste (€)</th></tr>
+            <tr><td>Creación de página web (básica)</td><td>2 – 5 €</td></tr>
+            <tr><td>SEO y posicionamiento</td><td>3 – 5 €</td></tr>
+            <tr><td>Copywriting (textos para tu web)</td><td>2 – 5 €</td></tr>
+            <tr><td><strong>Auditoría personal</strong></td><td><strong>10 €</strong></td></tr>
+        </table>
+        <p style="font-size: 0.95rem; color: var(--text-gray);">* Los precios aproximados dependen de la complejidad del proyecto. Consulta sin compromiso.</p>
+
+        <h3>📌 ¿Qué incluye cada servicio?</h3>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🔍 SEO y posicionamiento</h3>
+                <p>Te asesoro para elegir el nicho adecuado, investigar palabras clave y optimizar tu web para aparecer en los primeros resultados de Google. Incluye análisis de competencia y estrategias a corto plazo.</p>
+            </div>
+            <div class="card">
+                <h3>✍️ Copywriting profesional</h3>
+                <p>Creo textos 100% humanos, persuasivos y optimizados para conversión. Cada palabra está pensada para generar confianza y motivar a la acción. Sin IA, sin rodeos.</p>
+            </div>
+            <div class="card">
+                <h3>📘 Auditoría personal</h3>
+                <p>El servicio estrella. Incluye guía paso a paso para crear tu web desde cero, manual HTML en PDF, videollamadas para resolver dudas y soporte continuo. Es la ruta directa al éxito.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Creación de web rápida</h3>
+                <p>Tu página profesional en 24 horas. Diseño responsive, SEO básico y estructura clara. Ideal para negocios que necesitan presencia digital urgente.</p>
+            </div>
+        </div>
+
+        <h2>🔒 Seguridad y condiciones de pago</h2>
+        <div class="security-box">
+            <p><strong>Para garantizar la seriedad del proyecto, solicito una seña de 1€</strong> (que se descuenta del total). El resto se paga al finalizar el trabajo. Acepto pagos por Transfermóvil (Cuba) y, para clientes internacionales, mediante plataformas seguras.</p>
+            <p><strong>¿Por qué una seña?</strong> Porque he tenido experiencias de clientes que no cumplen su palabra. La seña me asegura que el proyecto es real y me permite dedicar mi tiempo y esfuerzo con total compromiso.</p>
+        </div>
+
+        <h2>🧠 Preguntas frecuentes sobre mis servicios</h2>
+        <div style="background: #0f172a; padding: 1.5rem; border-radius: 16px; margin: 1.5rem 0;">
+            <p><strong>¿Cuánto tiempo tarda en estar lista mi web?</strong> Depende de la complejidad, pero una web básica la entrego en 24-48 horas.</p>
+            <p><strong>¿Puedo ver ejemplos de tu trabajo?</strong> Sí, las páginas enlazadas arriba son mis creaciones.</p>
+            <p><strong>¿Qué pasa si no estoy satisfecho?</strong> Ofrezco revisiones hasta que quedes conforme. Mi objetivo es tu satisfacción.</p>
+            <p><strong>¿Aceptas pagos desde el extranjero?</strong> Sí, mediante Transfermóvil o plataformas como PayPal (consultar).</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>🔥 Oferta especial para los primeros 10 clientes</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Contrátame ahora y llévate un <strong style="color: var(--primary);">20% de descuento</strong> en todos los servicios durante 30 días.</p>
+            <a href="mailto:gonzalezlopezjosemanuel884@gmail.com" class="btn">📩 Escríbeme y empezamos</a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.7;">📱 <strong>WhatsApp:</strong> +53 59581052</p>
+        </div>
+
+        <hr style="border: 0; border-top: 2px solid #334155; margin: 2.5rem 0;">
+
+        <h3>📩 ¡Estemos en contacto!</h3>
+        <p>Puedes escribirme a <a href="mailto:gonzalezlopezjosemanuel884@gmail.com" style="color: var(--primary);">gonzalezlopezjosemanuel884@gmail.com</a> o rellenar el formulario de contacto.</p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100075450046235" target="_blank">💙 Facebook</a>
+            <a href="https://www.instagram.com/satoo_body_666" target="_blank">🧡 Instagram</a>
+            <a href="https://youtube.com/@satooplay" target="_blank">❤️ YouTube</a>
+            <a href="https://forms.gle/ZoaFQ1JSXwDk6Wq17" target="_blank">📋 Formulario de contacto</a>
+        </div>
+
+        <div class="footer-quote">
+            🌹 <em>"Hay que estar loco... para querer ser el villano de tu propia historia"</em> 🖤
+        </div>
     </div>
-    <div class="cta">
-        <p><strong>🔥 ¿Quieres que impulse tu negocio con SEO y diseño web?</strong></p>
-        <p><a href="mailto:gonzalezlopezjosemanuel884@gmail.com">👉 Escríbeme AHORA y empecemos tu proyecto 👈</a></p>
-    </div>
-    <hr>
-    <h3 style="color:yellow;">📩 ¡Estemos en contacto!</h3>
-    <div class="formulario">
-        <form action="mailto:gonzalezlopezjosemanuel884@gmail.com" method="POST" enctype="text/plain">
-            <p><strong>Tu nombre:</strong><br>
-            <input type="text" name="Nombre" style="width: 100%; padding: 10px; font-size: 16px;"></p>
-            <p><strong>Tu correo:</strong><br>
-            <input type="email" name="Email" style="width: 100%; padding: 10px; font-size: 16px;"></p>
-            <p><strong>Tus comentarios:</strong><br>
-            <textarea name="Comentarios" rows="6" cols="40" style="width: 100%; padding: 10px; font-size: 16px;"></textarea></p>
-            <p>
-            <input type="submit" value="Enviar datos" style="padding: 12px 30px; background: #ffdd00; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
-            <input type="reset" value="Borrar datos" style="padding: 12px 30px; background: #cccccc; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
-            </p>
-        </form>
-    </div>
-    <hr>
-    <p style="text-align: center; font-size: 20px;">🌹 <strong>"Hay que estar loco... para querer ser el villano de tu propia historia"</strong> 🖤</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de entrada del título
+            const h1 = document.querySelector('h1');
+            h1.style.opacity = '0';
+            h1.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                h1.style.transition = 'opacity 1s ease, transform 1s ease';
+                h1.style.opacity = '1';
+                h1.style.transform = 'scale(1)';
+            }, 200);
+
+            // Contador de clics en el botón de oferta
+            const btn = document.querySelector('.cta-box .btn');
+            btn.addEventListener('click', function() {
+                let clics = parseInt(localStorage.getItem('clicsPortafolio')) || 0;
+                clics++;
+                localStorage.setItem('clicsPortafolio', clics);
+                console.log(`📊 Clics en oferta del portafolio: ${clics}`);
+            });
+
+            // Animación de cards
+            const cards = document.querySelectorAll('.card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Mostrar la foto con efecto (si existe)
+            const img = document.querySelector('.foto-perfil');
+            if (img) {
+                img.style.opacity = '0';
+                setTimeout(() => {
+                    img.style.transition = 'opacity 1s ease';
+                    img.style.opacity = '1';
+                }, 300);
+            }
+        });
+    </script>
 </body>
 </html>
