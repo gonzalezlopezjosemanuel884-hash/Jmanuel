@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Manuel González López - Diseñador Web y SEO | Portafolio</title>
-    <meta name="description" content="José Manuel González López, diseñador web cubano. Especialista en HTML, CSS, SEO y copywriting. Precios desde 2€. Convierte tu idea en un negocio digital.">
+    <title>José Manuel González - Diseñador Web y SEO | Portafolio</title>
+    <meta name="description" content="José Manuel González, diseñador web cubano. Creo páginas web profesionales desde 2€. SEO, copywriting y diseño personalizado. ¡Contrátame y dale vida a tu negocio!">
     <link rel="canonical" href="https://gonzalezlopezjosemanuel884-hash.github.io/Jmanuel/Jose_Manuel_Gonzalez_Lopez.html">
-    <meta property="og:title" content="José Manuel González López - Diseñador Web y SEO">
-    <meta property="og:description" content="Diseñador web cubano especializado en creación de páginas profesionales, SEO y copywriting. Precios accesibles y resultados garantizados.">
+    <meta property="og:title" content="José Manuel González - Diseñador Web y SEO">
+    <meta property="og:description" content="Páginas web profesionales desde 2€. Diseño, SEO y copywriting para tu negocio. ¡Contrátame ahora!">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <style>
+        /* ===== RESET Y VARIABLES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --primary: #facc15;
             --primary-dark: #ca8a04;
@@ -23,262 +25,579 @@
             --bg-card: #1e293b;
             --text-light: #e2e8f0;
             --text-gray: #94a3b8;
+            --text-white: #f8fafc;
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --radius: 28px;
         }
+
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: var(--bg-dark);
             color: var(--text-light);
             line-height: 1.8;
             padding: 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             background: var(--bg-card);
-            border-radius: 32px;
+            border-radius: var(--radius);
             padding: 3rem 2.5rem;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
         }
+
+        /* ===== DECORACIÓN DE FONDO ===== */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(250, 204, 21, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(250, 204, 21, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* ===== TIPOGRAFÍA ===== */
         h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 800;
             color: var(--primary);
             text-align: center;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
         }
+
         .subhead {
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--text-gray);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.03em;
         }
-        .foto-perfil {
-            display: block;
-            margin: 0 auto 2rem;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--primary);
-            object-fit: cover;
-        }
+
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
+            font-weight: 700;
             color: var(--primary);
-            border-bottom: 2px solid #334155;
-            padding-bottom: 0.5rem;
-            margin: 2.5rem 0 1.5rem;
+            border-bottom: 3px solid rgba(250, 204, 21, 0.2);
+            padding-bottom: 0.75rem;
+            margin: 2.5rem 0 1.8rem;
+            position: relative;
         }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--primary-dark);
             margin: 2rem 0 0.75rem;
         }
+
         p {
             margin-bottom: 1.25rem;
             color: #cbd5e1;
+            font-size: 1.05rem;
         }
-        ul, ol {
-            margin: 1rem 0 1.5rem 2rem;
-            color: #cbd5e1;
+
+        /* ===== PERFIL ===== */
+        .perfil-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem 0 2.5rem;
         }
-        li {
+
+        .foto-perfil {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(250, 204, 21, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .foto-perfil:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 50px rgba(250, 204, 21, 0.35);
+        }
+
+        .etiqueta-destacada {
+            display: inline-block;
+            background: rgba(250, 204, 21, 0.15);
+            color: var(--primary);
+            padding: 0.25rem 1.2rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-top: 0.75rem;
+            border: 1px solid rgba(250, 204, 21, 0.2);
+        }
+
+        .presentacion {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 2rem;
+            font-size: 1.15rem;
+            color: var(--text-white);
+        }
+
+        .presentacion strong {
+            color: var(--primary);
+        }
+
+        /* ===== TARJETAS DE SERVICIOS ===== */
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .card-servicio {
+            background: #0f172a;
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #334155;
+            transition: all 0.35s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-servicio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .card-servicio:hover {
+            border-color: var(--primary);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px -10px rgba(250, 204, 21, 0.15);
+        }
+
+        .card-servicio:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-servicio .icono {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .card-servicio h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
+
+        .card-servicio p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        .card-servicio .precio {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background: var(--primary);
+            color: var(--bg-dark);
+            font-weight: 700;
+            padding: 0.2rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== TABLA DE PRECIOS ===== */
+        .tabla-wrapper {
+            background: #0f172a;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            margin: 1.5rem 0;
+        }
+
+        .tabla-precios {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabla-precios th {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            text-align: left;
+            font-size: 1.05rem;
+        }
+
+        .tabla-precios td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #1e293b;
+            color: #cbd5e1;
+        }
+
+        .tabla-precios tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabla-precios tr:hover td {
+            background: rgba(250, 204, 21, 0.03);
+        }
+
+        .tabla-precios .precio-destacado {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* ===== CAJA DE SEGURIDAD ===== */
+        .security-box {
+            background: #0f172a;
+            padding: 1.8rem;
+            border-radius: 20px;
+            border-left: 6px solid var(--primary);
+            margin: 2rem 0;
+        }
+
+        .security-box p {
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
+        }
+
+        .security-box strong {
+            color: var(--primary);
+        }
+
+        /* ===== CTA ===== */
+        .cta-box {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 2.8rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            border: 2px solid var(--primary);
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .cta-box h2 {
+            border-bottom: none;
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .cta-box h2::after {
+            display: none;
+        }
+
+        .cta-box p {
+            color: var(--text-gray);
+            font-size: 1.15rem;
+        }
+
         .btn {
             display: inline-block;
             background: var(--primary);
             color: var(--bg-dark);
             font-weight: 700;
-            padding: 0.85rem 2.5rem;
+            padding: 0.9rem 2.8rem;
             border-radius: 9999px;
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            box-shadow: 0 8px 25px -6px rgba(250, 204, 21, 0.3);
         }
+
         .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 25px -8px rgba(250,204,21,0.3);
+            transform: scale(1.04);
+            box-shadow: 0 12px 35px -6px rgba(250, 204, 21, 0.5);
+            background: #eab308;
         }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
+
+        .btn-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
         }
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--bg-dark);
+
+        .btn-whatsapp:hover {
+            transform: scale(1.04);
+            background: #1ebe5c;
         }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .card {
-            background: #334155;
-            padding: 2rem;
-            border-radius: 24px;
-            border: 1px solid #475569;
-            transition: all 0.3s;
-        }
-        .card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 8px 25px -8px rgba(250,204,21,0.2);
-            transform: translateY(-4px);
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        .table-prices {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
+
+        /* ===== ENLACES INTERNOS ===== */
+        .enlaces-internos {
             background: #0f172a;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-        .table-prices th {
-            background: var(--primary);
-            color: var(--bg-dark);
-            padding: 1rem;
-            font-weight: 700;
-            text-align: left;
-        }
-        .table-prices td {
-            padding: 1rem;
-            border-bottom: 1px solid #334155;
-        }
-        .table-prices tr:last-child td {
-            border-bottom: none;
-        }
-        .cta-box {
-            background: #0f172a;
-            padding: 2.5rem;
-            border-radius: 24px;
-            text-align: center;
-            border: 2px solid var(--primary);
+            padding: 1.8rem 2rem;
+            border-radius: 20px;
             margin: 2.5rem 0;
         }
-        .cta-box h2 {
-            border-bottom: none;
-            margin-top: 0;
+
+        .enlaces-internos ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
         }
+
+        .enlaces-internos li {
+            margin: 0;
+        }
+
+        .enlaces-internos a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            background: rgba(250, 204, 21, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .enlaces-internos a:hover {
+            background: rgba(250, 204, 21, 0.15);
+            text-decoration: none;
+        }
+
+        /* ===== SOCIAL ===== */
         .social-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1.8rem;
             margin: 2.5rem 0 1.5rem;
         }
+
         .social-links a {
             color: var(--text-gray);
             font-weight: 500;
             text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
         }
+
         .social-links a:hover {
             color: var(--primary);
         }
+
+        /* ===== FOOTER ===== */
         .footer-quote {
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-gray);
             border-top: 1px solid #334155;
             padding-top: 2rem;
             margin-top: 2rem;
         }
-        .security-box {
-            background: #1e293b;
-            padding: 1.5rem;
-            border-radius: 16px;
-            border-left: 6px solid var(--primary);
-            margin: 1.5rem 0;
+
+        .footer-quote em {
+            color: var(--primary);
+            font-style: italic;
         }
-        @media (max-width: 700px) {
-            .container { padding: 2rem 1.2rem; }
-            h1 { font-size: 2.2rem; }
-            .grid-2 { grid-template-columns: 1fr; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.2rem;
+            }
+            h1 {
+                font-size: 2.4rem;
+            }
+            .subhead {
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .grid-servicios {
+                grid-template-columns: 1fr 1fr;
+            }
+            .tabla-precios th,
+            .tabla-precios td {
+                padding: 0.7rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-servicios {
+                grid-template-columns: 1fr;
+            }
+            .foto-perfil {
+                width: 140px;
+                height: 140px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .cta-box {
+                padding: 2rem 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¿Quién es José Manuel González López?</h1>
-        <div class="subhead">Diseñador Web · SEO · Copywriter · Emprendedor cubano 🇨🇺</div>
 
-        <img src="Elcaballerodelasrosas.jpg" alt="José Manuel González López - Diseñador Web" class="foto-perfil">
+        <!-- ====== CABECERA ====== -->
+        <div class="perfil-wrapper">
+            <img src="Elcaballerodelasrosas.jpg" alt="José Manuel González - Diseñador Web y SEO" class="foto-perfil">
+            <span class="etiqueta-destacada">🌹 Diseñador Web · SEO · Copywriter</span>
+        </div>
 
-        <p style="text-align: center; font-size: 1.2rem;">Hola, soy <strong>José Manuel</strong>, un apasionado del diseño web y el SEO. No vendo turrones ni raspaduras: <strong style="color: var(--primary);">hago páginas web y aplico SEO</strong> para que tu negocio despegue.</p>
+        <h1>José Manuel González López</h1>
+        <p class="subhead">De la idea a la web profesional · Precios desde 2€</p>
 
-        <h2>📂 Mi trayectoria y mis páginas más destacadas</h2>
-        <p>Empecé desde cero, sin computadora, solo con mi móvil y conexión a internet intermitente. En poco tiempo, he creado varias páginas web que ya están en línea y generan interés. Estas son algunas de ellas:</p>
-        <ul>
-            <li><a href="index.html" style="color: var(--primary);">📖 ¿Es posible crear una web sin curso de 4 horas?</a></li>
-            <li><a href="ganar_dinero.html" style="color: var(--primary);">💰 Cómo ganar dinero con páginas HTML</a></li>
-            <li><a href="programar-html-css-js.html" style="color: var(--primary);">💻 Guía definitiva de HTML, CSS y JavaScript</a></li>
-        </ul>
-        <p>Estas páginas no solo son funcionales, sino que están optimizadas para SEO y diseñadas con un enfoque profesional. Cada una refleja mi compromiso con la calidad y la utilidad para el usuario.</p>
+        <div class="presentacion">
+            <p>
+                Hola, soy <strong>José Manuel</strong>, un apasionado del diseño web y el SEO. 
+                No vendo turrones ni raspaduras: <strong>hago páginas web y aplico SEO</strong> 
+                para que tu negocio despegue. Empecé desde cero, con un móvil y sin inversión. 
+                Si yo pude, tú también.
+            </p>
+        </div>
 
-        <h2>🛠️ Servicios y precios</h2>
-        <p>Te ofrezco servicios adaptados a tus necesidades, con precios accesibles para que cualquier emprendedor pueda dar el salto digital.</p>
-
-        <table class="table-prices">
-            <tr><th>Servicio</th><th>Coste (€)</th></tr>
-            <tr><td>Creación de página web (básica)</td><td>2 – 5 €</td></tr>
-            <tr><td>SEO y posicionamiento</td><td>3 – 5 €</td></tr>
-            <tr><td>Copywriting (textos para tu web)</td><td>2 – 5 €</td></tr>
-            <tr><td><strong>Auditoría personal</strong></td><td><strong>10 €</strong></td></tr>
-        </table>
-        <p style="font-size: 0.95rem; color: var(--text-gray);">* Los precios aproximados dependen de la complejidad del proyecto. Consulta sin compromiso.</p>
-
-        <h3>📌 ¿Qué incluye cada servicio?</h3>
-        <div class="grid-2">
-            <div class="card">
-                <h3>🔍 SEO y posicionamiento</h3>
-                <p>Te asesoro para elegir el nicho adecuado, investigar palabras clave y optimizar tu web para aparecer en los primeros resultados de Google. Incluye análisis de competencia y estrategias a corto plazo.</p>
+        <!-- ====== SERVICIOS ====== -->
+        <h2>🛠️ Servicios que ofrezco</h2>
+        <div class="grid-servicios">
+            <div class="card-servicio">
+                <span class="icono">🚀</span>
+                <h4>Creación de web</h4>
+                <p>Página profesional en 24 horas. Diseño responsive y SEO básico.</p>
+                <span class="precio">2 – 5 €</span>
             </div>
-            <div class="card">
-                <h3>✍️ Copywriting profesional</h3>
-                <p>Creo textos 100% humanos, persuasivos y optimizados para conversión. Cada palabra está pensada para generar confianza y motivar a la acción. Sin IA, sin rodeos.</p>
+            <div class="card-servicio">
+                <span class="icono">🔍</span>
+                <h4>SEO y posicionamiento</h4>
+                <p>Aparece en Google con mi estrategia. Nicho, keywords y análisis.</p>
+                <span class="precio">3 – 5 €</span>
             </div>
-            <div class="card">
-                <h3>📘 Auditoría personal</h3>
-                <p>El servicio estrella. Incluye guía paso a paso para crear tu web desde cero, manual HTML en PDF, videollamadas para resolver dudas y soporte continuo. Es la ruta directa al éxito.</p>
+            <div class="card-servicio">
+                <span class="icono">✍️</span>
+                <h4>Copywriting</h4>
+                <p>Textos 100% humanos que convierten. Sin IA, sin rodeos.</p>
+                <span class="precio">2 – 5 €</span>
             </div>
-            <div class="card">
-                <h3>⚡ Creación de web rápida</h3>
-                <p>Tu página profesional en 24 horas. Diseño responsive, SEO básico y estructura clara. Ideal para negocios que necesitan presencia digital urgente.</p>
+            <div class="card-servicio">
+                <span class="icono">📘</span>
+                <h4>Auditoría personal</h4>
+                <p>Guía paso a paso, manual HTML, videollamadas y soporte.</p>
+                <span class="precio">10 €</span>
             </div>
         </div>
 
-        <h2>🔒 Seguridad y condiciones de pago</h2>
+        <!-- ====== TABLA DE PRECIOS ====== -->
+        <h2>💰 Precios claros y sin sorpresas</h2>
+        <div class="tabla-wrapper">
+            <table class="tabla-precios">
+                <tr>
+                    <th>Servicio</th>
+                    <th>Coste (€)</th>
+                </tr>
+                <tr>
+                    <td>Creación de página web (básica)</td>
+                    <td>2 – 5 €</td>
+                </tr>
+                <tr>
+                    <td>SEO y posicionamiento</td>
+                    <td>3 – 5 €</td>
+                </tr>
+                <tr>
+                    <td>Copywriting (textos para tu web)</td>
+                    <td>2 – 5 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Auditoría personal</strong></td>
+                    <td class="precio-destacado"><strong>10 €</strong></td>
+                </tr>
+            </table>
+        </div>
+        <p style="font-size: 0.95rem; color: var(--text-gray); text-align: right;">* Los precios aproximados dependen de la complejidad del proyecto.</p>
+
+        <!-- ====== SEGURIDAD ====== -->
         <div class="security-box">
-            <p><strong>Para garantizar la seriedad del proyecto, solicito una seña de 1€</strong> (que se descuenta del total). El resto se paga al finalizar el trabajo. Acepto pagos por Transfermóvil (Cuba) y, para clientes internacionales, mediante plataformas seguras.</p>
-            <p><strong>¿Por qué una seña?</strong> Porque he tenido experiencias de clientes que no cumplen su palabra. La seña me asegura que el proyecto es real y me permite dedicar mi tiempo y esfuerzo con total compromiso.</p>
+            <p><strong>🔒 Condiciones de pago</strong></p>
+            <p>Para empezar a trabajar, solicito una <strong>seña de 1€</strong> (que se descuenta del total). Esto me asegura que el proyecto es real y me permite dedicar mi tiempo con total compromiso. El resto se paga al finalizar.</p>
+            <p>✅ Pago seguro por Transfermóvil. Para clientes internacionales, consultar.</p>
         </div>
 
-        <h2>🧠 Preguntas frecuentes sobre mis servicios</h2>
-        <div style="background: #0f172a; padding: 1.5rem; border-radius: 16px; margin: 1.5rem 0;">
-            <p><strong>¿Cuánto tiempo tarda en estar lista mi web?</strong> Depende de la complejidad, pero una web básica la entrego en 24-48 horas.</p>
-            <p><strong>¿Puedo ver ejemplos de tu trabajo?</strong> Sí, las páginas enlazadas arriba son mis creaciones.</p>
-            <p><strong>¿Qué pasa si no estoy satisfecho?</strong> Ofrezco revisiones hasta que quedes conforme. Mi objetivo es tu satisfacción.</p>
-            <p><strong>¿Aceptas pagos desde el extranjero?</strong> Sí, mediante Transfermóvil o plataformas como PayPal (consultar).</p>
-        </div>
-
-        <!-- CTA -->
+        <!-- ====== CTA ====== -->
         <div class="cta-box">
-            <h2>🔥 Oferta especial para los primeros 10 clientes</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Contrátame ahora y llévate un <strong style="color: var(--primary);">20% de descuento</strong> en todos los servicios durante 30 días.</p>
+            <h2>🔥 ¿Listo para tener tu web profesional?</h2>
+            <p style="margin-bottom: 1.5rem;">
+                Contrátame ahora y llévate un <strong style="color: var(--primary);">20% de descuento</strong> en todos los servicios durante 30 días.<br>
+                <span style="font-size: 0.9rem; opacity: 0.7;">Solo para los primeros 10 clientes.</span>
+            </p>
             <a href="mailto:gonzalezlopezjosemanuel884@gmail.com" class="btn">📩 Escríbeme y empezamos</a>
-            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.7;">📱 <strong>WhatsApp:</strong> +53 59581052</p>
+            <br>
+            <a href="https://wa.me/5359581052" target="_blank" class="btn-whatsapp">💬 Escríbeme por WhatsApp</a>
+            <p style="margin-top: 1.2rem; font-size: 0.9rem; opacity: 0.7;">
+                📧 gonzalezlopezjosemanuel884@gmail.com · 📱 +53 59581052
+            </p>
         </div>
 
-        <hr style="border: 0; border-top: 2px solid #334155; margin: 2.5rem 0;">
+        <!-- ====== ENLACES INTERNOS ====== -->
+        <div class="enlaces-internos">
+            <ul>
+                <li><a href="index.html">📖 Guía: Crear web sin curso</a></li>
+                <li><a href="ganar_dinero.html">💰 Cómo ganar dinero con HTML</a></li>
+                <li><a href="programar-html-css-js.html">💻 Tutorial HTML + CSS + JS</a></li>
+            </ul>
+        </div>
 
-        <h3>📩 ¡Estemos en contacto!</h3>
-        <p>Puedes escribirme a <a href="mailto:gonzalezlopezjosemanuel884@gmail.com" style="color: var(--primary);">gonzalezlopezjosemanuel884@gmail.com</a> o rellenar el formulario de contacto.</p>
-
+        <!-- ====== REDES SOCIALES ====== -->
         <div class="social-links">
             <a href="https://www.facebook.com/profile.php?id=100075450046235" target="_blank">💙 Facebook</a>
             <a href="https://www.instagram.com/satoo_body_666" target="_blank">🧡 Instagram</a>
@@ -286,34 +605,37 @@
             <a href="https://forms.gle/ZoaFQ1JSXwDk6Wq17" target="_blank">📋 Formulario de contacto</a>
         </div>
 
+        <!-- ====== FOOTER ====== -->
         <div class="footer-quote">
             🌹 <em>"Hay que estar loco... para querer ser el villano de tu propia historia"</em> 🖤
         </div>
+
     </div>
 
+    <!-- ====== JAVASCRIPT PREMIUM ====== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Animación de entrada del título
-            const h1 = document.querySelector('h1');
-            h1.style.opacity = '0';
-            h1.style.transform = 'scale(0.9)';
-            setTimeout(() => {
-                h1.style.transition = 'opacity 1s ease, transform 1s ease';
-                h1.style.opacity = '1';
-                h1.style.transform = 'scale(1)';
-            }, 200);
 
-            // Contador de clics en el botón de oferta
-            const btn = document.querySelector('.cta-box .btn');
-            btn.addEventListener('click', function() {
-                let clics = parseInt(localStorage.getItem('clicsPortafolio')) || 0;
-                clics++;
-                localStorage.setItem('clicsPortafolio', clics);
-                console.log(`📊 Clics en oferta del portafolio: ${clics}`);
-            });
+            // === Efecto de escritura en el título ===
+            const titulo = document.querySelector('h1');
+            const textoOriginal = titulo.textContent;
+            titulo.textContent = '';
+            let i = 0;
+            const velocidad = 80;
 
-            // Animación de cards
-            const cards = document.querySelectorAll('.card');
+            function escribir() {
+                if (i < textoOriginal.length) {
+                    titulo.textContent += textoOriginal.charAt(i);
+                    i++;
+                    setTimeout(escribir, velocidad);
+                } else {
+                    titulo.style.borderRight = 'none';
+                }
+            }
+            escribir();
+
+            // === Animación de las tarjetas al hacer scroll ===
+            const cards = document.querySelectorAll('.card-servicio');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -330,15 +652,28 @@
                 observer.observe(card);
             });
 
-            // Mostrar la foto con efecto (si existe)
-            const img = document.querySelector('.foto-perfil');
-            if (img) {
-                img.style.opacity = '0';
-                setTimeout(() => {
-                    img.style.transition = 'opacity 1s ease';
-                    img.style.opacity = '1';
-                }, 300);
+            // === Contador de clics en el CTA ===
+            const btnCta = document.querySelector('.cta-box .btn');
+            if (btnCta) {
+                btnCta.addEventListener('click', function() {
+                    let clics = parseInt(localStorage.getItem('clicsPortafolio')) || 0;
+                    clics++;
+                    localStorage.setItem('clicsPortafolio', clics);
+                    console.log('📊 Clics en portafolio: ' + clics);
+                });
             }
+
+            // === Efecto hover en la foto (sutil) ===
+            const foto = document.querySelector('.foto-perfil');
+            if (foto) {
+                foto.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 0 50px rgba(250, 204, 21, 0.5)';
+                });
+                foto.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 0 30px rgba(250, 204, 21, 0.2)';
+                });
+            }
+
         });
     </script>
 </body>
